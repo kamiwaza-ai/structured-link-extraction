@@ -101,7 +101,7 @@ function getDefaultPrompt(extractorId: string): string {
     case 'key-quotes':
       return 'Extract 3-5 most important quotes from the transcript. For each quote, provide the exact quote text, its significance, and the context around it.';
     case 'sales-email':
-      return 'Create a sales email based on the transcript content. Include a subject line, email body referencing specific insights, and a clear call to action. You are writing the email to the speaker in the video. Use the context of what theyre discussing in your intro and find a unique way to pivot to trying to sell them on Kamiwaza. Kamiwaza is a Generative AI Platform for Enterprises that enables them to build, deploy, and scale Generative AI applications. Make the email convincing and personalized to the speaker, but not too salesy.';
+      return 'Create a sales email based on the transcript content. Include a subject line, email body referencing specific insights, and a clear call to action. You are writing the email to the speaker in the video. Use the context of what theyre discussing in your intro and find a unique way to pivot to trying to sell them on Kamiwaza. Kamiwaza is a Generative AI Platform for Enterprises that enables them to build, deploy, and scale Generative AI applications. Make the email convincing and personalized to the speaker, but not too salesy. Keep it concise and to the point. No more than 100 words. You are trying to set up a call.';
     case 'key-points':
       return 'Analyze the transcript and provide the main points with supporting evidence, and a conclusion.';
     default:

@@ -1,6 +1,6 @@
 # YouTube Transcript Analyzer
 
-![YouTube Transcript Analyzer Screenshot](public/screenshot.png)
+![YouTube Transcript Analyzer Screenshot](public/image.png)
 
 A powerful tool that extracts and analyzes YouTube video transcripts using AI. Powered by [Kamiwaza.ai](https://kamiwaza.ai), this application demonstrates how to build practical AI-powered content analysis tools.
 
@@ -33,6 +33,8 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) to see the application.
 
 ## 💡 Use Cases & Customization
+
+![YouTube Transcript Analyzer Screenshot](public/screenshot.png)
 
 The project includes example schemas for different types of analysis, which can be adapted for various use cases:
 
