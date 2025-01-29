@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# YouTube Transcript Analyzer
 
-## Getting Started
+![YouTube Transcript Analyzer Screenshot](public/screenshot.png)
 
-First, run the development server:
+A powerful tool that extracts and analyzes YouTube video transcripts using AI. Powered by [Kamiwaza.ai](https://kamiwaza.ai), this application demonstrates how to build practical AI-powered content analysis tools.
 
+## 🚀 Features
+
+- Extract transcripts from any YouTube video
+- Multiple analysis templates:
+  - Key Quotes Extraction
+  - Sales Email Generation
+  - Main Points Summary
+  - Custom Analysis
+
+## 🛠 Getting Started
+
+1. Clone the repository
+2. Copy the environment variables:
+```bash
+cp .example.env .env.local
+```
+3. Update the environment variables in `.env.local`
+4. Install dependencies:
+```bash
+npm install
+```
+5. Run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💡 Use Cases & Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project includes example schemas for different types of analysis, which can be adapted for various use cases:
 
-## Learn More
+### Education
+- Lecture summarization
+- Study guide generation
+- Key concept extraction
+- Quiz question generation
 
-To learn more about Next.js, take a look at the following resources:
+### Sales & Marketing
+- Sales opportunity identification
+- Competitor analysis
+- Market research insights
+- Customer testimonial extraction
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Content Creation
+- Video summarization
+- Content repurposing
+- Social media snippet generation
+- Blog post outline creation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Research & Analysis
+- Interview transcription analysis
+- Qualitative data coding
+- Theme identification
+- Research summary generation
 
-## Deploy on Vercel
+You can customize the analysis templates by modifying the schemas in `app/api/transcript/analyze/route.ts`. Each schema defines the structure of the extracted information:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```typescript
+const customSchema = z.object({
+  // Define your custom schema here
+  topics: z.array(z.string()),
+  insights: z.array(z.object({
+    topic: z.string(),
+    details: z.string()
+  }))
+});
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤖 About Kamiwaza.ai
+
+The AI capabilities of this project are powered by Kamiwaza.ai, a production-ready AI inference platform. Kamiwaza provides:
+
+- Secure and scalable model inference
+- Built-in authentication and user management
+- High-performance AI model deployment
+- Cost-effective inference solutions
+- Enterprise-grade reliability
+
+[Learn more about Kamiwaza](https://kamiwaza.ai)
+
